@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckj2h7j86fs50"]
+
+[ext_resource type="PackedScene" uid="uid://cyepvnpn4hs67" path="res://nodes/character.tscn" id="1_ogj0g"]
+[ext_resource type="PackedScene" uid="uid://dg1qwbbo5ytn4" path="res://nodes/plant.tscn" id="2_k7enr"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="character" parent="." instance=ExtResource("1_ogj0g")]
+
+[node name="plant" parent="." instance=ExtResource("2_k7enr")]

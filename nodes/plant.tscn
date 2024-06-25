@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg1qwbbo5ytn4"]
+
+[ext_resource type="Script" path="res://scripts/plant.gd" id="1_r0axn"]
+[ext_resource type="Texture2D" uid="uid://cfj5it73nhwcu" path="res://sprites/sprout.png" id="2_1fgjl"]
+
+[node name="plant" type="Node"]
+script = ExtResource("1_r0axn")
+
+[node name="growthTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="moistureTimer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="plantSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_1fgjl")
+
+[node name="moistureProgressBar" type="ProgressBar" parent="."]
+offset_left = -13.0
+offset_top = 8.0
+offset_right = 13.0
+offset_bottom = 15.0
+value = 100.0
+show_percentage = false
+
+[connection signal="timeout" from="growthTimer" to="." method="_on_growth_timer_timeout"]
+[connection signal="timeout" from="moistureTimer" to="." method="_on_moisture_timer_timeout"]
