@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/plant.gd" id="1_r0axn"]
 [ext_resource type="Texture2D" uid="uid://cfj5it73nhwcu" path="res://sprites/sprout.png" id="2_1fgjl"]
 
-[node name="plant" type="Node"]
+[node name="plant" type="Node2D"]
 script = ExtResource("1_r0axn")
 
 [node name="growthTimer" type="Timer" parent="."]

@@ -55,7 +55,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="character" type="Node"]
+[node name="character" type="Node2D"]
 
 [node name="characterBody" type="CharacterBody2D" parent="."]
 script = ExtResource("1_oe2xr")
